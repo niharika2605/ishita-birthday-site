@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BDAY ISHITA! ✨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka+One&family=Lobster&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #FF007F;
+            --lime-green: #CCFF00;
+            --electric-blue: #00FFFF;
+            --bright-yellow: #FFFF00;
+        }
+
+        body {
+            background-color: #fce7f3;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-crazy { font-family: 'Bungee', cursive; }
+        .font-bubble { font-family: 'Fredoka One', cursive; }
+        .font-fancy { font-family: 'Lobster', cursive; }
+
+        .bg-neon-pink { background-color: var(--neon-pink); }
+        .text-neon-pink { color: var(--neon-pink); }
+        .bg-lime-green { background-color: var(--lime-green); }
+        .text-lime-green { color: var(--lime-green); }
+
+        .sticker {
+            position: absolute;
+            z-index: 10;
+            pointer-events: none;
+            filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.2));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(var(--rot)); }
+            50% { transform: translateY(-15px) rotate(calc(var(--rot) + 5deg)); }
+        }
+
+        .polaroid {
+            background: white;
+            padding: 1rem 1rem 3rem 1rem;
+            box-shadow: 10px 10px 0px rgba(0,0,0,1);
+            border: 2px solid black;
+            transition: transform 0.3s ease;
+        }
+        .polaroid:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            z-index: 50;
+        }
+
+        /* Cake Styling */
+        .candle {
+            width: 12px;
+            height: 40px;
+            background: linear-gradient(to bottom, #ff9ff3, #f368e0);
+            position: relative;
+            border-radius: 4px;
+        }
+        .flame {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 20px;
+            background: #ffa502;
+            border-radius: 50% 50% 20% 20%;
+            animation: flicker 0.1s ease-in-out infinite alternate;
+            box-shadow: 0 0 15px #ffa502;
+        }
+        @keyframes flicker {
+            0% { transform: translateX(-50%) scale(1); }
+            100% { transform: translateX(-50%) scale(1.1); }
+        }
+        .flame.blown {
+            display: none;
+        }
+
+        .message-box {
+            display: none;
+            background: white;
+            border: 4px solid black;
+            box-shadow: 15px 15px 0px var(--neon-pink);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: var(--bright-yellow); }
+        ::-webkit-scrollbar-thumb { background: var(--neon-pink); border: 2px solid black; }
+    </style>
+</head>
+<body class="selection:bg-lime-green selection:text-black">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden bg-white border-b-8 border-black">
+        <!-- Floating Stickers -->
+        <div class="sticker top-10 left-10 text-4xl" style="--rot: -10deg">🔥</div>
+        <div class="sticker top-20 right-20 text-4xl" style="--rot: 15deg">✨</div>
+        <div class="sticker bottom-20 left-1/4 text-6xl font-crazy text-neon-pink" style="--rot: -5deg">SLAY</div>
+        <div class="sticker top-1/3 right-10 text-6xl font-crazy text-lime-green bg-black px-4" style="--rot: 8deg">DUH</div>
+        
+        <div class="z-20 text-center">
+            <p class="text-xl md:text-2xl font-bold bg-black text-white px-4 py-1 inline-block mb-4 rotate-2">ITS A SPECIAL DAY!</p>
+            <h1 class="text-6xl md:text-9xl font-crazy leading-none tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                HAPPY<br>BIRTHDAY<br>ISHITA
+            </h1>
+            <p class="text-2xl font-bubble mt-4 animate-bounce">Scroll for Magic! 👇</p>
+        </div>
+        
+        <!-- Animated Background Shapes -->
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-lime-green rounded-full opacity-50 blur-3xl"></div>
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-neon-pink rounded-full opacity-50 blur-3xl"></div>
+    </header>
+
+    <!-- Photo Section -->
+    <section class="py-20 px-4 bg-lime-green border-b-8 border-black">
+        <h2 class="text-4xl md:text-6xl font-crazy text-center mb-16 underline decoration-black underline-offset-8">THE VIBE CHECK 📸</h2>
+        
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Polaroid 1 -->
+            <div class="polaroid rotate-3">
+                <div class="w-full aspect-square bg-gray-200 overflow-hidden border-2 border-black">
+                    <img src="1.png" alt="Ishita" class="w-full h-full object-cover">
+                </div>
+                <p class="mt-4 font-fancy text-2xl text-center">Queen! 👑</p>
+            </div>
+
+            <!-- Polaroid 2 -->
+            <div class="polaroid -rotate-2 md:mt-12">
+                <div class="w-full aspect-square bg-gray-200 overflow-hidden border-2 border-black rounded-full">
+                    <img src="2.png" alt="Ishita" class="w-full h-full object-cover">
+                </div>
+                <p class="mt-4 font-crazy text-lg text-center bg-neon-pink text-white py-1">ICONIC</p>
+            </div>
+
+            <!-- Polaroid 3 -->
+            <div class="polaroid rotate-6">
+                <div class="w-full aspect-square bg-gray-200 overflow-hidden border-2 border-black">
+                    <img src="3.png" alt="Ishita" class="w-full h-full object-cover">
+                </div>
+                <p class="mt-4 font-fancy text-2xl text-center">Main Character Energy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cake Section -->
+    <section id="cake-section" class="py-20 px-4 flex flex-col items-center bg-white">
+        <h2 class="text-4xl md:text-6xl font-crazy text-center mb-8">MAKE A WISH! 🎂</h2>
+        <p class="text-lg mb-8 text-center font-bold px-4 py-2 bg-yellow-300 border-2 border-black shadow-[4px_4px_0px_black]">
+            Enable microphone and <span class="text-neon-pink underline">BLOW</span> into your device to put out the candles!
+        </p>
+
+        <button id="start-mic" class="mb-12 px-8 py-3 bg-black text-white font-crazy rounded-full hover:bg-neon-pink transition-colors">
+            START BLOWING! 🎤
+        </button>
+
+        <div class="relative mt-20">
+            <!-- The Cake -->
+            <div class="w-64 h-32 bg-neon-pink border-4 border-black rounded-t-xl relative">
+                <!-- Frosting -->
+                <div class="absolute -top-4 left-0 w-full flex justify-between px-2">
+                    <div class="w-10 h-10 bg-white rounded-full border-4 border-black"></div>
+                    <div class="w-10 h-10 bg-white rounded-full border-4 border-black"></div>
+                    <div class="w-10 h-10 bg-white rounded-full border-4 border-black"></div>
+                    <div class="w-10 h-10 bg-white rounded-full border-4 border-black"></div>
+                </div>
+                
+                <!-- Candles -->
+                <div class="absolute -top-14 left-0 w-full flex justify-around px-8">
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                </div>
+            </div>
+            <div class="w-72 h-40 bg-lime-green border-4 border-black rounded-xl -mt-2"></div>
+            <!-- Plate -->
+            <div class="w-80 h-4 bg-gray-300 border-4 border-black rounded-full -mt-1 mx-auto"></div>
+        </div>
+
+        <div id="mic-meter" class="mt-8 w-48 h-4 bg-gray-200 border-2 border-black rounded-full overflow-hidden hidden">
+            <div id="mic-fill" class="h-full bg-neon-pink w-0 transition-all duration-100"></div>
+        </div>
+    </section>
+
+    <!-- Final Message Button -->
+    <section class="py-20 bg-black text-white flex flex-col items-center overflow-hidden">
+        <button id="reveal-btn" class="hidden transform hover:scale-110 transition-transform bg-lime-green text-black px-12 py-6 rounded-2xl border-4 border-white font-crazy text-3xl shadow-[0_0_50px_rgba(204,255,0,0.5)]">
+            CLICK FOR YOUR SURPRISE! 🎁
+        </button>
+
+        <div id="personal-message" class="message-box max-w-2xl mx-4 p-8 text-black mt-10">
+            <h3 class="font-crazy text-3xl mb-4 text-neon-pink">DEAREST ISHITA,</h3>
+            <p class="text-xl leading-relaxed font-medium">
+                Happyyy happyyy birthdayyy to you Ishitaaaaa</p>
+It's really fun being friends with you, u are funny(sometimes) in your own different way(the way u say "talk to my hand" is super funny 😂😭), u are caring, it's just really nice being around u.</p>
+
+It's tough to make friends who u can really vibe with and share anything and for that I am really lucky to have you. The college I got may not have been of my choice but the friends I got, u I got, I'll always be thankful. Being friends with u made my college time a whole lot better.</p>
+
+U are  really just a very very nice person, not saying this just because it's your birthday but u really are and this is probably the only time I am saying this😛</p>
+
+There is not much time left for our college to end and then we'll all be busy with our separate lives so I just hope we'll stay in touch, even if we won't be able to talk much you'll always be a friend that I am really thankful to have and wanna say I am here whenever u want cause I am obviously the coolest friend u can ever have. </p>
+
+Used my whole vocabulary to write u this.</p>
+
+Happy birthday!!!!</p>
+Hope u conquer everything u want.</p>
+
+            </p>
+            <p class="mt-6 font-fancy text-3xl text-right">- niharika🥱</p>
+        </div>
+    </section>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti" class="fixed top-0 left-0 w-full h-full pointer-events-none z-[100]"></canvas>
+
+    <script>
+        const startMicBtn = document.getElementById('start-mic');
+        const flames = document.querySelectorAll('.flame');
+        const revealBtn = document.getElementById('reveal-btn');
+        const messageBox = document.getElementById('personal-message');
+        const micMeter = document.getElementById('mic-meter');
+        const micFill = document.getElementById('mic-fill');
+        
+        let blownOut = false;
+
+        // Microphone Logic
+        async function startMic() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const analyser = audioContext.createAnalyser();
+                const microphone = audioContext.createMediaStreamSource(stream);
+                
+                analyser.fftSize = 256;
+                const bufferLength = analyser.frequencyBinCount;
+                const dataArray = new Uint8Array(bufferLength);
+                
+                microphone.connect(analyser);
+                
+                startMicBtn.classList.add('hidden');
+                micMeter.classList.remove('hidden');
+
+                function checkVolume() {
+                    if (blownOut) return;
+                    
+                    analyser.getByteFrequencyData(dataArray);
+                    let sum = 0;
+                    for (let i = 0; i < bufferLength; i++) {
+                        sum += dataArray[i];
+                    }
+                    const average = sum / bufferLength;
+                    
+                    // Update meter
+                    micFill.style.width = Math.min(100, (average / 50) * 100) + '%';
+
+                    // If volume threshold met
+                    if (average > 40) { // Threshold for "blowing"
+                        extinguishCandles();
+                    }
+                    
+                    requestAnimationFrame(checkVolume);
+                }
+                
+                checkVolume();
+            } catch (err) {
+                console.error('Mic access denied', err);
+                // Fallback if mic fails
+                startMicBtn.innerHTML = "CLICK TO BLOW! 🌬️";
+                startMicBtn.onclick = extinguishCandles;
+            }
+        }
+
+        function extinguishCandles() {
+            blownOut = true;
+            flames.forEach((f, i) => {
+                setTimeout(() => {
+                    f.classList.add('blown');
+                }, i * 200);
+            });
+            
+            micMeter.classList.add('hidden');
+            
+            // Success animation
+            setTimeout(() => {
+                revealBtn.classList.remove('hidden');
+                revealBtn.scrollIntoView({ behavior: 'smooth' });
+                startConfetti();
+            }, 1000);
+        }
+
+        startMicBtn.addEventListener('click', startMic);
+
+        // Confetti Logic
+        const canvas = document.getElementById('confetti');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function startConfetti() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            for (let i = 0; i < 150; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height - canvas.height,
+                    size: Math.random() * 10 + 5,
+                    color: ['#FF007F', '#CCFF00', '#00FFFF', '#FFFF00'][Math.floor(Math.random() * 4)],
+                    velX: Math.random() * 2 - 1,
+                    velY: Math.random() * 3 + 2,
+                    rot: Math.random() * 360
+                });
+            }
+            animateConfetti();
+        }
+
+        function animateConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.y += p.velY;
+                p.x += p.velX;
+                p.rot += 5;
+                ctx.fillStyle = p.color;
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                ctx.rotate(p.rot * Math.PI / 180);
+                ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size);
+                ctx.restore();
+            });
+            requestAnimationFrame(animateConfetti);
+        }
+
+        revealBtn.addEventListener('click', () => {
+            messageBox.style.display = 'block';
+            revealBtn.style.display = 'none';
+            messageBox.scrollIntoView({ behavior: 'smooth' });
+            // Add a little extra burst
+            startConfetti();
+        });
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
